@@ -24,7 +24,7 @@ export default class Grid extends Component {
         this.setState({
           grid: game.step()
         })
-      }, 200);
+      }, 100);
     }
 
     renderGrid() {
@@ -35,8 +35,8 @@ export default class Grid extends Component {
       const squareWidth = stageWidth / width;
       const squareHeight = stageHeight / height;
       
-      return grid.map((row, rowIndex) => {
-        return row.map((col, colIndex) => {
+      return Object.keys(grid).map((row, rowIndex) => {
+        return grid[row].map((col, colIndex) => {
           const fill = col ? aliveFill : deadFill;
           const x = colIndex * squareWidth;
           const y = rowIndex * squareHeight;

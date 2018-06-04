@@ -21,10 +21,54 @@
   font-size: large;
 }
 
+.edit-grid {
+  display: inline-flex;
+  padding-bottom: 12px;
+}
+
+.edit-grid-textarea {
+  width: 230px;
+  border-radius: 3px;
+  background-color: white;
+  border-color: #696969;
+}
+
+.edit-grid-action {
+  cursor: pointer;
+  border-radius: 3px;
+  color: #19bc8b;
+  background-color: white;
+  border-color: #696969;
+  margin: 0 12px;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.edit-grid-action:disabled {
+  cursor: not-allowed;
+  color: #696969;
+}
+
+.edit-grid-action:focus {
+  outline: none;
+}
+
+button:not([disabled]).raise:hover {
+  transition: 0.25s;
+  box-shadow: 0 0 0.3em .02em #19bc8b;
+  transform: translateY(-0.1em);
+}
+
+.width-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #game-canvas {
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 400px;
 }
 
 @keyframes App-logo-spin {

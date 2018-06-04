@@ -13,8 +13,8 @@ class App extends Component {
         <p className="App-intro">
           The game of <code>Life</code>...
         </p>
-        <div id="game-container"></div>
         <Board />
+        <div id="game-container"></div>
       </div>
     );
   }

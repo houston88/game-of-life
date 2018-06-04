@@ -55,8 +55,8 @@ export default class Game {
 
     step() {
       // copy grid
-      let newGrid = this.grid.map(function(arr) {
-        return arr.slice();
+      let newGrid = Object.keys(this.grid).map((rowIndex) => {
+        return this.grid[rowIndex].slice();
       });
       // run calcs
       for (let row = 0; row < this.height; row++) {
